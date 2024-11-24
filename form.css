@@ -1,0 +1,70 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('img/background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      background: #f9f9f9;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-container div {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px 40px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    .login-btn {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .login-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      text-align: left;
+    }
