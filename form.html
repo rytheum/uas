@@ -1,28 +1,36 @@
-<html>
 
+<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Login Page
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
-<div class="login-container">
-    <h2>Get Started To Our Course</h2>
-    <form id="login-form">
-        <div>
-            <input type="email" id="email" placeholder="Email" required>
-            <i class="fas fa-envelope input-icon"></i>
-            <p class="error-message" id="email-error"></p>
-        </div>
-        <div>
-            <input type="tel" id="phone" placeholder="Telephone Number" required>
-            <i class="fas fa-phone input-icon tel"></i>
-            <p class="error-message" id="phone-error"></p>
-        </div>
-        <button type="submit" class="login-btn">Join Our Course</button>
-    </form>
-</div>
+    <div class="login-container">
+        <img alt="Logo" height="50"
+            src="img/akademi-crypto.png"
+            width="50" />
+        <h2>
+            Get Started To Our Course
+        </h2>
+        
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9e87e32b-6522-462b-a019-a5931d38f3f8">
+            <input type="email" name="email" placeholder="****@example.com" required="" />
+            <input type="tel" name="tel" placeholder="+62 (123) 456-789" required="" />
+            <button type="submit">
+                Join Course
+            </button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 
-</html>
+

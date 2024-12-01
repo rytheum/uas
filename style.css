@@ -1,16 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    background-color: #0a0a3e;
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
+    background-color: #232b2b;
 }
 
 .navbar {
@@ -18,12 +10,41 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #001F3F;
+    background-color: #232b2b;
 }
 
 .navbar .logo {
     font-size: 24px;
     font-weight: bold;
+}
+.logo {
+    display: flex;
+    /* Arrange items in a row */
+    align-items: center;
+    /* Vertically center items */
+    gap: 10px;
+    /* Add space between the image and text */
+    text-decoration: none;
+    /* Remove underline for links */
+    color: white;
+    /* Ensure text color matches your design */
+}
+
+.logo img {
+    height: 50px;
+    /* Ensure the image has a fixed height */
+    width: 50px;
+    /* Set the image width */
+}
+
+.logo-text {
+    font-size: 24px;
+    /* Adjust the font size of "cryptic" */
+    font-weight: bold;
+    color: white;
+    /* Match text color with the rest of the navbar */
+    text-transform: capitalize;
+    /* Optional: capitalize the first letter */
 }
 
 .navbar ul {
@@ -77,7 +98,7 @@ body {
 
 .navbar ul li a.get-started:hover {
     background-color: white;
-    color: #0a0a3e;
+    color: #232b2b;
 }
 
 .navbar ul li a.get-started::after {
@@ -114,16 +135,102 @@ body {
 .navbar ul.show {
     display: block;
 }
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    background-color: #161616;
+    min-height: 100vh;
+    padding: 5rem 10% 8rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.2rem;
+}
+
+.about-video {
+    padding-top: 1.3%;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 2.3rem;
+    background: linear-gradient(#59ffff, #1952ab);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-content p {
+    font-size: 1rem;
+    margin: 0.6rem 0 1.3rem
+}
+
+span {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0a0a3e;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #fff;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .navbar .menu-icon {
+        display: block;
+    }
+}
+
 .home {
-    width: 100%;
+    width: 107%;
     height: auto;
     /* Ubah dari 100vh ke auto */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 8% 0;
-    background-color: #0a0a3e;
+    padding: 100px 8% 8rem;
+    background-color: #232b2b;
+    background-image: linear-gradient(#232b2b, rgba(8, 6, 6, 0.5)), url(img/crypto.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     /* Tambahkan padding-top untuk memberikan ruang di atas */
+}
+
+.home-image img {
+    width: 80%;
+}
+
+.home-content h1 {
+    font-weight: 600;
+    font-size: 60px;
 }
 
 /* Media query untuk ukuran layar kecil */
@@ -146,7 +253,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    
+
 }
 
 @media (max-width: 768px) {
@@ -160,7 +267,7 @@ body {
 }
 
 .home-content h1 {
-    font-size: 45px;
+    font-size: 50px;
     line-height: 1.2;
 }
 
@@ -199,4 +306,83 @@ body {
     color: #fff;
 }
 
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
+@media (max-width:1024px) {
+    .about {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .about-video iframe {
+        width: 520;
+    }
+
+    .heading {
+        font-size: 3rem;
+        align-items: center;
+
+    }
+
+    .about-content h2 {
+        text-align: center;
+        line-height: 0.8;
+    }
+
+    .about-content h3 {
+        font-size: 2rem;
+
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
+
+@media (max-width:768px) {
+    .about {
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .about-video iframe {
+        width: auto;
+        height: auto;
+    }
+
+    .heading {
+        font-size: 3rem;
+        align-items: center;
+
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+
+    .about-content h3 {
+        font-size: 2rem;
+
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
