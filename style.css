@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     color: white;
     background-color: #232b2b;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .navbar {
@@ -80,19 +81,20 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #4fc3f7;
+    color: #b207f6;
 }
 
 .navbar ul li a:hover::after {
     width: 100%;
     left: 0;
-    background: #4fc3f7;
+    background: #b207f6;
 }
 
 .navbar ul li a.get-started {
-    border: 2px solid white;
+    border: 2px solid #b207f6;
     padding: 5px 10px;
     border-radius: 5px;
+    background-color: #b207f6;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -160,11 +162,12 @@ body {
 .about-content h2 {
     text-align: left;
     line-height: 1.2;
+    color: white;
 }
 
 .about-content h3 {
     font-size: 2.3rem;
-    background: linear-gradient(#59ffff, #1952ab);
+    background: linear-gradient(rgb(49, 15, 49), #b207f6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -172,7 +175,8 @@ body {
 
 .about-content p {
     font-size: 1rem;
-    margin: 0.6rem 0 1.3rem
+    margin: 0.6rem 0 1.3rem;
+    color:white;
 }
 
 span {
@@ -184,7 +188,7 @@ span {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #0a0a3e;
+        background-color: #232b2b;
         position: absolute;
         top: 60px;
         left: 0;
@@ -209,7 +213,7 @@ span {
 }
 
 .home {
-    width: 107%;
+    width: 100%;
     height: auto;
     /* Ubah dari 100vh ke auto */
     display: flex;
@@ -231,8 +235,11 @@ span {
 .home-content h1 {
     font-weight: 600;
     font-size: 60px;
+    color: #fff;
 }
-
+.home-content p {
+    color: #fff;
+}
 /* Media query untuk ukuran layar kecil */
 @media (max-width: 768px) {
     .home {
@@ -244,7 +251,7 @@ span {
 .home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 100px;
     align-items: center;
     transition: all 0.5s ease;
 }
@@ -272,7 +279,7 @@ span {
 }
 
 .home-content h1:nth-child(3) {
-    background: linear-gradient(#59ffff, #1952ab);
+    background: linear-gradient(rgb(90, 2, 222), #b207f6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -292,20 +299,63 @@ span {
 
 .btn {
     padding: 10px 28px;
-    background: #42c1e8;
-    border: 2px solid #42c1e8;
+    background: #b207f6;
+    border: 2px solid #b207f6;
     border-radius: 6px;
     font-size: 16px;
-    color: #01003f;
+    color: white;
     letter-spacing: 1px;
     transition: 0.3s;
 }
 
 .btn:hover {
     background: transparent;
-    color: #fff;
 }
 
+    
+        .stats-section {
+            background-color: #801dab;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            font-size: 60px;
+        }
+    
+        .stat-item {
+            display: inline-block;
+            width: 22%;
+            margin: 0 1%;
+        }
+    
+        .stat-item i {
+            font-size: 50px;
+            color: #fff;
+        }
+    
+        .stat-item h2 {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+    
+        .stat-item p {
+            font-size: 18px;
+            margin: 0;
+        }
+    
+        @media (max-width: 768px) {
+            .stat-item {
+                width: 45%;
+                margin: 10px 2.5%;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .stat-item {
+                width: 90%;
+                margin: 10px 5%;
+            }
+        }
+    
 .footer {
     background-color: black;
     color: white;
@@ -319,6 +369,7 @@ span {
         padding: 2rem;
         text-align: center;
         position: relative;
+        
     }
 
     .about-video iframe {
@@ -334,6 +385,7 @@ span {
     .about-content h2 {
         text-align: center;
         line-height: 0.8;
+        color: #fff;
     }
 
     .about-content h3 {
@@ -372,12 +424,13 @@ span {
 
     .about-content h3 {
         font-size: 2rem;
-
+        color: #b207f6;
     }
 
     .about-content p {
         font-size: 1rem;
         text-align: justify;
+        color: white;
     }
 
 
