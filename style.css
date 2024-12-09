@@ -2,8 +2,8 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
-    background-color: #232b2b;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    background-color: #161616;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -99,14 +99,24 @@ body {
 }
 
 .navbar ul li a.get-started:hover {
-    background-color: white;
-    color: #232b2b;
+    background-color: transparent;
+    color: white;
 }
 
 .navbar ul li a.get-started::after {
     display: none;
 }
 
+.navbar a:hover,
+.navbar .home-active {
+    color: #b207f6;
+    position: relative;
+}
+
+.active {
+    background-color: #b207f6;
+    color: #fff;
+}
 .navbar .menu-icon {
     font-size: 24px;
     display: none;
@@ -148,6 +158,7 @@ body {
     background-color: #161616;
     min-height: 100vh;
     padding: 5rem 10% 8rem;
+    
 }
 
 .heading {
@@ -167,7 +178,7 @@ body {
 
 .about-content h3 {
     font-size: 2.3rem;
-    background: linear-gradient(rgb(49, 15, 49), #b207f6);
+    background: linear-gradient(rgb(90, 2, 222), #b207f6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -225,6 +236,7 @@ span {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
     /* Tambahkan padding-top untuk memberikan ruang di atas */
 }
 
@@ -254,6 +266,7 @@ span {
     gap: 100px;
     align-items: center;
     transition: all 0.5s ease;
+    
 }
 
 .home-image img {
@@ -310,6 +323,7 @@ span {
 
 .btn:hover {
     background: transparent;
+    border-color: #801dab;
 }
 
     
@@ -432,8 +446,99 @@ span {
         text-align: justify;
         color: white;
     }
+}
 
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+    background-color: #232b2b;
+    color: #fff;
+    max-width: 600px;
+    margin: auto;
+}
 
+#news .card-img-top {
+    height: 200px;
+    /* Sesuaikan tinggi gambar */
+    object-fit: cover;
+    /* Memastikan gambar sesuai dengan ukuran tanpa merusak proporsi */
+    width: 100%;
+    /* Memastikan gambar mengisi seluruh lebar card */
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-text {
+    color: white;
+}
+
+.team-card-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.team-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.team-card {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(229, 225, 225, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+        display: block;
+            /* Tambahkan ini */
+            margin: 0 auto;
+            /* Agar gambar berada di tengah */
+}
+
+.team-card .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.team-card .role {
+    font-size: 0.9em;
+    color: #b207f6;
+    margin-bottom: 10px;
+}
+
+.team-card .rating {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        width: 100%;
+        margin: 10px 0;
+        
+    }
 }
 
 html {

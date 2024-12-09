@@ -16,8 +16,36 @@ body {
 .navbar .logo {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+}
+
+.logo {
+  display: flex;
+  /* Arrange items in a row */
+  align-items: center;
+  /* Vertically center items */
+  gap: 10px;
+  /* Add space between the image and text */
   text-decoration: none;
+  /* Remove underline for links */
+  color: white;
+  /* Ensure text color matches your design */
+}
+
+.logo img {
+  height: 50px;
+  /* Ensure the image has a fixed height */
+  width: 50px;
+  /* Set the image width */
+}
+
+.logo-text {
+  font-size: 24px;
+  /* Adjust the font size of "cryptic" */
+  font-weight: bold;
+  color: white;
+  /* Match text color with the rest of the navbar */
+  text-transform: capitalize;
+  /* Optional: capitalize the first letter */
 }
 
 .navbar ul {
@@ -53,29 +81,41 @@ body {
 }
 
 .navbar ul li a:hover {
-  color: #4fc3f7;
+  color: #b207f6;
 }
 
 .navbar ul li a:hover::after {
   width: 100%;
   left: 0;
-  background: #4fc3f7;
+  background: #b207f6;
 }
 
 .navbar ul li a.get-started {
-  border: 2px solid white;
+  border: 2px solid #b207f6;
   padding: 5px 10px;
   border-radius: 5px;
+  background-color: #b207f6;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar ul li a.get-started:hover {
-  background-color: white;
-  color: #0a0a3e;
+  background-color: transparent;
+  color: white;
 }
 
 .navbar ul li a.get-started::after {
   display: none;
+}
+
+.navbar a:hover,
+.navbar .home-active {
+  color: #b207f6;
+  position: relative;
+}
+
+.active {
+  background-color: #b207f6;
+  color: #fff;
 }
 
 .navbar .menu-icon {
@@ -108,7 +148,6 @@ body {
 .navbar ul.show {
   display: block;
 }
-
 .container {
   display: flex;
   justify-content: center;

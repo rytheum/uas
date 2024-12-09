@@ -46,7 +46,5 @@ function animateCounts() {
 
 // Call animateCounts on load
 window.addEventListener("load", animateCounts);
-
-
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
