@@ -20,32 +20,22 @@ body {
 }
 .logo {
     display: flex;
-    /* Arrange items in a row */
     align-items: center;
-    /* Vertically center items */
     gap: 10px;
-    /* Add space between the image and text */
     text-decoration: none;
-    /* Remove underline for links */
     color: white;
-    /* Ensure text color matches your design */
 }
 
 .logo img {
     height: 50px;
-    /* Ensure the image has a fixed height */
     width: 50px;
-    /* Set the image width */
 }
 
 .logo-text {
     font-size: 24px;
-    /* Adjust the font size of "cryptic" */
     font-weight: bold;
     color: white;
-    /* Match text color with the rest of the navbar */
     text-transform: capitalize;
-    /* Optional: capitalize the first letter */
 }
 
 .navbar ul {
@@ -178,7 +168,7 @@ body {
 
 .about-content h3 {
     font-size: 2.3rem;
-    background: linear-gradient(rgb(90, 2, 222), #b207f6);
+    background: linear-gradient(#5a02de, #b207f6);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -226,7 +216,6 @@ span {
 .home {
     width: 100%;
     height: auto;
-    /* Ubah dari 100vh ke auto */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,8 +225,6 @@ span {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* Tambahkan padding-top untuk memberikan ruang di atas */
 }
 
 .home-image img {
@@ -252,11 +239,10 @@ span {
 .home-content p {
     color: #fff;
 }
-/* Media query untuk ukuran layar kecil */
+
 @media (max-width: 768px) {
     .home {
         padding-top: 80px;
-        /* Sesuaikan padding-top untuk layar kecil */
     }
 }
 
@@ -398,7 +384,7 @@ span {
 
     .about-content h2 {
         text-align: center;
-        line-height: 0.8;
+        line-height: 1.2;
         color: #fff;
     }
 
@@ -434,11 +420,11 @@ span {
 
     .about-content h2 {
         text-align: center;
+        line-height: 1.2;
     }
 
     .about-content h3 {
         font-size: 2rem;
-        color: #b207f6;
     }
 
     .about-content p {
@@ -459,12 +445,10 @@ span {
 
 #news .card-img-top {
     height: 200px;
-    /* Sesuaikan tinggi gambar */
     object-fit: cover;
-    /* Memastikan gambar sesuai dengan ukuran tanpa merusak proporsi */
     width: 100%;
-    /* Memastikan gambar mengisi seluruh lebar card */
 }
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -479,7 +463,7 @@ span {
 }
 
 .team-card-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -512,9 +496,7 @@ span {
     height: 150px;
     object-fit: cover;
         display: block;
-            /* Tambahkan ini */
             margin: 0 auto;
-            /* Agar gambar berada di tengah */
 }
 
 .team-card .name {
@@ -544,3 +526,101 @@ span {
 html {
     scroll-behavior: smooth;
 }
+
+.team-card-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.team-card {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(229, 225, 225, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(229, 225, 225, 0.3);
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.team-card .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.team-card .role {
+    font-size: 0.9em;
+    color: #b207f6;
+    margin-bottom: 10px;
+}
+
+.team-card .rating {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .team-card-container {
+        padding: 10px;
+    }
+    .team-card {
+        width: calc(100% - 40px);
+        margin: 10px 0;
+    }
+}
+
+.ourteam{
+    min-height: 100vh;
+    padding: 5rem 10% 8rem;
+    background-color: #232b2b;
+    background-image: linear-gradient(#232b2b, rgba(8, 6, 6, 0.2)), url(img/tiga.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#news {
+    padding: 1rem 10% 3rem;
+}
+
+#news .card-img-top {
+    max-height: 150px; 
+    object-fit: cover; 
+    width: 100%; 
+    border-radius: 8px;  
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.02);
+}
+
+.social-icons {
+    color: #b207f6;
+    margin-top: 10px;
+  }
+  
